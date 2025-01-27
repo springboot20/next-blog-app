@@ -12,7 +12,7 @@ export const truncate = (char: string, length: number): string => {
 
 export default function BlogCard({ blog }: BlogInterface) {
   return (
-    <div className='rounded-t-lg w-full overflow-hidden'>
+    <div className='rounded-t-lg w-full overflow-hidden blog-card'>
       <div className='w-full h-52'>
         <img
           src={blog?.social_image}

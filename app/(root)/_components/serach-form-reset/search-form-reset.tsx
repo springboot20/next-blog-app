@@ -13,6 +13,7 @@ export default function SearchFormReset() {
     <button
       type='reset'
       onClick={reset}
+      data-test="search-form-reset"
       className='size-5 rounded-full bg-gray-700 text-white flex items-center justify-center'>
       <Link href='/'>&times;</Link>
     </button>

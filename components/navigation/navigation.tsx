@@ -19,7 +19,7 @@ export function Navigation() {
               }}
             />
           </Link>
-          <button type='button' className='lg:hidden'>
+          <button type='button' aria-label='open menu'>
             <span className='sr-only'>open menu</span>
             <svg
               viewBox='0 0 32 32'
