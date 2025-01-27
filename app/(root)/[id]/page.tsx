@@ -69,7 +69,7 @@ async function BlogDetails({
         </div>
       </div>
 
-      <div className='max-w-7xl mx-auto'>
+      <div className='max-w-7xl mx-auto px-4 xl:px-0'>
         <h1 className='text-center font-nunito font-bold text-2xl text-[#571244]'>More articles</h1>
 
         <div className='grid sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-5'>
