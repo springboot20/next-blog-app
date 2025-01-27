@@ -9,11 +9,6 @@ describe('BlogList Component', () => {
     cy.visit('/'); // Adjust this route based on your app's routing
   });
 
-  it('should render the blog list correctly', () => {
-    // Verify the list contains the expected number of blogs
-    cy.get('.blog-card').should('have.length', 3); // Adjust this based on your fixture data
-  });
-
   it('should handle API errors gracefully', () => {
     // Simulate an API error
     cy.intercept('GET', 'https://dev.to/api/articles', {
@@ -26,6 +21,12 @@ describe('BlogList Component', () => {
 
     // Verify error message
     cy.get('span').should('contain.text', 'No posts found. Please try again later.');
+  });
+
+  it('should render the blog list correctly', () => {
+    cy.wait('@fetchBlogsError');
+    // Verify the list contains the expected number of blogs
+    cy.get('.blog-card').should('have.length', 3); // Adjust this based on your fixture data
   });
 
   it('should navigate to the blog details page when a blog card is clicked', () => {
